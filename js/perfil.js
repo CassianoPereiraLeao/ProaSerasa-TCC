@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             let response = await fetch(`https://api.webmercadoria.com.br/api/pet/?id=${session.petId}`);
             let petPerfil = document.getElementById("pet-perfil");
 
-            petPerfil.textContent = response.pets[0].name;
+            petPerfil.textContent = `Nome do pet: ${response.pets[0].name}`;
         }
     }
 });
