@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const id = params.get("id");
 
     let response = await fetch(`https://api.webmercadoria.com.br/api/pet/?id=${id}`);
-    let pet = response.pet[0];
+    let data = await response.json();
+    let pet = data.pet[0];
 
     let caixaCards = document.getElementById("caixa-card-perfil-dog");
 
