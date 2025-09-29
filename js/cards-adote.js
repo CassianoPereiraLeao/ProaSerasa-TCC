@@ -7,9 +7,6 @@ async function generateCard() {
         "../../assets/aldogao.jpg",
         "../../assets/alex.jpg",
         "../../assets/cachorro-em-estudio.jpg",
-        "../../assets/cachorro-sorrindo.jpg",
-        "../../assets/cao-sentado.jpg",
-        "../../assets/pata.jpg",
         "../../assets/flor.jpg",
         "../../assets/foto-cao.jpg"
     ];
