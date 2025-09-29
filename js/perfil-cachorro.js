@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     let response = await fetch(`https://api.webmercadoria.com.br/api/pet/${id}`);
     let pet = response.pet[0];
 
+    let caixaCards = document.getElementById("caixa-card-perfil-dog");
+
     let card = document.createElement("div");
 
     let img = document.createElement("img");
