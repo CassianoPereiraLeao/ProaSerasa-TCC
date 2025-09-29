@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     let petLocale = document.createElement("p");
     petLocale.textContent = pet.locale;
 
-    let petAbout = document.createElement("a");
-    petAbout.href = `../perfil-cachorro/?id=${pet.id}`;
+    let petMessage = document.createElement("span");
+    petMessage.textContent = "Cachorro dócil e brincalhão, com um pouco de atenção ele se apega a você";
 
     card.appendChild(img);
     card.appendChild(petName);

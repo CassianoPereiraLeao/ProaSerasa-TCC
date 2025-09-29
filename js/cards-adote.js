@@ -4,7 +4,7 @@ async function generateCard() {
     let session = JSON.parse(sessionStorage.getItem("pets"));
 
     let lista = [
-        "../../assets/algodao.jpg",
+        "../../assets/aldogao.jpg",
         "../../assets/alex.jpg",
         "../../assets/cachorro-em-estudio.jpg",
         "../../assets/cachorro-sorrindo.jpg",
@@ -14,7 +14,9 @@ async function generateCard() {
         "../../assets/foto-cao.jpg"
     ];
 
-    let listaGato = [];
+    let listaGato = [
+        "../../assets/cat.jpg"
+    ];
 
     if(!session) {
         await fetch("https://api.webmercadoria.com.br/api/pet")
@@ -60,6 +62,8 @@ async function generateCard() {
         petLocale.textContent = element.locale;
 
         let petAbout = document.createElement("a");
+        petAbout.textContent = "Saiba Mais";
+        petAbout.classList.add("card-btn");
         petAbout.href = `../perfil-cachorro/?id=${element.id}`;
 
         card.appendChild(img);
@@ -69,6 +73,7 @@ async function generateCard() {
         card.appendChild(petAge);
         card.appendChild(petSize);
         card.appendChild(petLocale);
+        card.appendChild(petAbout);
         caixaCards.appendChild(card);
     });
 }
