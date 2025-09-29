@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
+    const params = new URLSearchParams(window.location.search);
+
+    const id = params.get("id");
+
     let response = await fetch(`https://api.webmercadoria.com.br/api/pet/${id}`);
     let pet = response.pet[0];
 
