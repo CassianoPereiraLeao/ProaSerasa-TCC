@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const id = params.get("id");
 
-    let response = await fetch(`https://api.webmercadoria.com.br/api/pet/?id=${id}`)
+    await fetch(`https://api.webmercadoria.com.br/api/pet/?id=${id}`)
         .then(res => res.json())
         .then(data => {
             let pet = data.pet[0];
