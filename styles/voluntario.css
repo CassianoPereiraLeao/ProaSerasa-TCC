@@ -1,0 +1,177 @@
+@import url(reset.css);
+
+.navbar {
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar img {
+    width: 64px;
+}
+
+.btn-navbar {
+    border-radius: 1.25rem;
+    padding: 0.6rem 1rem;
+
+    border: none;
+    color: white;
+    background-color: var(--laranja-forte);
+}
+
+.btn-navbar:hover {
+    cursor: pointer;
+    color: var(--laranja-forte);
+    background-color: white;
+    border: solid 1px var(--laranja-forte);
+}
+
+/* texto principal  */
+
+.inicio-texto {
+    margin: 1.25rem;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* formulario */
+
+section.formulario {
+    padding: 4rem;
+}
+
+.caixa-formulario {
+    margin: 1.25rem;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-formulario>div {
+    padding: 0.3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.caixa-formulario input {
+    border-radius: 1rem;
+    padding: .7rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    border: 1px solid var(--contra);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--laranja-forte);
+    box-shadow: 0 0 4px rgba(255, 132, 20, 0.5);
+}
+
+.texto-termos {
+    display: flex;
+    gap: 1rem;
+    margin: .7rem 0rem;
+}
+
+textarea {
+    outline: none;
+    max-width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid var(--laranja-forte);
+    border-radius: 8px;
+}
+
+
+.enviar {
+    margin: 4rem;
+    border: none;
+    border-radius: 1.25rem;
+    background-color: var(--laranja-forte);
+    color: white;
+    padding: 1rem;
+}
+
+.enviar:hover {
+    cursor: pointer;
+    color: var(--laranja-forte);
+    background-color: white;
+    border: solid 1px var(--laranja-forte);
+}
+
+
+
+/* footer */
+
+footer {
+    background-color: var(--card-fundo);
+
+}
+
+.caixa-final-flex {
+    padding: 1.25rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-final img {
+    width: 64px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: .5rem;
+}
+
+.redes-sociais i {
+    padding: .5rem 0rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+}
+
+.redes-sociais i:hover {
+    color: var(--laranja-forte);
+}
+
+.email {
+    text-align: end;
+}
+
+address a {
+    color: var(--texto-escuro);
+}
+
+@media screen and (max-width:1020px) {
+    /* footer  */
+
+    .caixa-final-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .email {
+        text-align: center;
+    }
+
+    .email p {
+        margin: .5rem;
+    }
+}

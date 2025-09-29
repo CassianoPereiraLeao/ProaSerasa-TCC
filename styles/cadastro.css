@@ -1,0 +1,387 @@
+@import url(reset.css);
+
+.navbar {
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar img {
+    width: 64px;
+}
+
+.lista-navbar {
+    display: flex;
+    gap: 1rem;
+}
+
+.lista-navbar a {
+    padding: .8rem;
+    color: black;
+}
+
+.lista-navbar a:hover {
+    color: var(--laranja-forte);
+}
+
+.btn-navbar {
+    border-radius: 1.25rem;
+    padding: 0.6rem 1rem;
+
+    border: none;
+    color: white;
+    background-color: var(--laranja-forte);
+}
+
+.btn-navbar{
+    margin-left:.5rem ;
+}
+
+.btn-navbar:hover {
+    cursor: pointer;
+    color: var(--laranja-forte);
+    background-color: white;
+    border: solid 1px var(--laranja-forte);
+}
+
+/* Estilo-menu-mobile */
+
+.overlay-menu {
+    background-color: #000000d5;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+    display: none;
+}
+
+.btn-abrir-menu i {
+    font-size: 2.25rem;
+    color: var(--laranja-forte);
+}
+
+.overlay-menu.show {
+    display: block;
+}
+
+.menu-mobile {
+    background-color: var(--card-fundo);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.btn-abrir-menu {
+    display: none;
+}
+
+.btn-fechar {
+    padding: 1.25rem 4%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: var(--laranja-forte);
+    font-size: 2.25rem;
+}
+
+
+.menu-mobile .lista-navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* botão dentro do menu mobile */
+.menu-mobile .btn-navbar {
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+    width: 80%;
+    border-radius: 1.25rem;
+    padding: 0.8rem 1rem;
+    color: white;
+}
+
+.menu-mobile .navbar {
+    margin-top: 1rem;
+    padding: 0;
+
+    width: 100%;
+    justify-content: end;
+}
+
+.menu-mobile .navbar .link-navbar {
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+
+    display: block;
+    color: black;
+}
+
+.menu-mobile .navbar .link-navbar:hover {
+    background-color: white;
+    color: var(--laranja-forte);
+}
+
+/* Inicio estrutura base */
+
+.texto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagem-esquerda {
+    width: 400px;
+    flex-wrap: wrap;
+}
+
+.caixa {
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-texto-botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.texto-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1.25rem;
+}
+
+/* botoes inicio */
+
+.social-login {
+    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.botao {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: .5rem;
+
+    background-color: white;
+    padding: .6rem .25rem;
+
+    border: solid 1px black;
+    border-radius: 1.25rem;
+    width: 100%;
+}
+
+.botao:hover {
+    cursor: pointer;
+    background-color: var(--laranja-forte);
+    color: white;
+    transition: 0.3s;
+}
+
+.espaco-span {
+    font-weight: 550;
+}
+
+/* formulario */
+
+section.formulario {
+    padding: 4rem;
+}
+
+.caixa-formulario {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-formulario>div {
+    padding: 0.3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.caixa-formulario input {
+    border-radius: 1rem;
+    padding: .7rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    border: 1px solid var(--contra);
+}
+
+
+input:focus {
+    outline: none;
+    border-color: var(--laranja-forte);
+    box-shadow: 0 0 4px rgba(255, 132, 20, 0.5);
+}
+
+.texto-termos {
+    display: flex;
+    gap: 1rem;
+    margin: .7rem 0rem;
+}
+
+.registrar {
+    /* border: solid 1px black; */
+    border: none;
+    border-radius: 1.25rem;
+    background-color: var(--laranja-forte);
+    color: white;
+    padding: 1rem;
+}
+
+.registrar:hover {
+    cursor: pointer;
+    color: var(--laranja-forte);
+    background-color: white;
+    border: solid 1px var(--laranja-forte);
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--card-fundo);
+
+}
+
+.caixa-final-flex {
+    padding: 1.25rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-final img {
+    width: 64px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: .5rem;
+}
+
+.redes-sociais i {
+    padding: .5rem 0rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+}
+
+.redes-sociais i:hover {
+    color: var(--laranja-forte);
+}
+
+.email {
+    text-align: end;
+}
+
+address a {
+    color: var(--texto-escuro);
+}
+
+
+@media screen and (max-width:1020px) {
+
+    .navbar a+p{
+        display: none;
+    }
+
+
+    .btn-abrir-menu {
+        display: flex;
+    }
+
+    .lista-navbar {
+        display: none;
+    }
+
+    .btn-navbar {
+        display: none;
+    }
+
+    .flex-inicio {
+        flex-wrap: wrap-reverse;
+        gap: 2rem;
+        flex-direction: column-reverse;
+    }
+
+    /* footer  */
+
+    .caixa-final-flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .email {
+        text-align: center;
+    }
+
+    .email p {
+        margin: .5rem;
+    }
+
+    /* formulario */
+
+    .texto {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 625px) {
+    .imagem-esquerda {
+        width: 250px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    section.formulario {
+        padding: 1.25rem;
+    }
+
+}
