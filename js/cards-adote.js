@@ -3,6 +3,19 @@ async function generateCard() {
 
     let session = JSON.parse(sessionStorage.getItem("pets"));
 
+    let lista = [
+        "../../assets/algodao.jpg",
+        "../../assets/alex.jpg",
+        "../../assets/cachorro-em-estudio.jpg",
+        "../../assets/cachorro-sorrindo.jpg",
+        "../../assets/cao-sentado-feliz.jpg",
+        "../../assets/pata.jpg",
+        "../../assets/flor.jpg",
+        "../../assets/foto-cao.jpg"
+    ];
+
+    let listaGato = [];
+
     if(!session) {
         await fetch("https://api.webmercadoria.com.br/api/pet")
         .then(res => res.json())
@@ -18,8 +31,14 @@ async function generateCard() {
         let card = document.createElement("div");
 
         let img = document.createElement("img");
-        img.src = "../../assets/dog-1.jpg";
-        img.alt = `Foto do ${element.name}`;
+        if (element.type === "Cachorro" || element.type === "Cadela"){
+            img.src = lista[Math.floor(Math.random() * lista.length)];
+            img.alt = `Foto do ${element.name}`;
+        } else if (element.type === "Gato" || element.type === "Gata") {
+            img.src = listaGato[Math.floor(Math.random() * lista.length)];
+            img.alt = `Foto do ${element.name}`;
+        }
+
         card.className = "card";
 
         let petName = document.createElement("h3");
@@ -32,7 +51,7 @@ async function generateCard() {
         petVaccines.textContent = `Vacinas: ${element.vaccines}`;
 
         let petAge = document.createElement("p");
-        petAge.textContent = `Idade: ${element.age}`;
+        petAge.textContent = `Idade: ${element.age} anos`;
 
         let petSize = document.createElement("p");
         petSize.textContent = element.animalSize;
