@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const params = new URLSearchParams(window.location.search);
 
     const id = params.get("id");
+    console.log(id);
 
     await fetch(`https://api.webmercadoria.com.br/api/pet/?id=${id}`)
         .then(res => res.json())
         .then(data => {
+            console.log(data);
             let pet = data.pet[0];
 
             let caixaCards = document.getElementById("caixa-card-perfil-dog");
