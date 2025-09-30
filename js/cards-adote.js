@@ -12,14 +12,15 @@ async function generateCard() {
     ];
 
     let listaGato = [
-        "../../assets/cat.jpg"
+        "../../assets/cat.jpg",
+        "../../assets/oi.jpg"
     ];
 
     if(!session) {
         await fetch("https://api.webmercadoria.com.br/api/pet")
         .then(res => res.json())
         .then(data => {
-            sessionStorage.setItem("pets", JSON.stringify(data, null, 2));
+            sessionStorage.setItem("pets", JSON.stringify(data));
             session = data;
         });
     }
