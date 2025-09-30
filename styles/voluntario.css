@@ -11,6 +11,20 @@
     width: 64px;
 }
 
+.lista-navbar {
+    display: flex;
+    gap: 1rem;
+}
+
+.lista-navbar a {
+    padding: .8rem;
+    color: black;
+}
+
+.lista-navbar a:hover {
+    color: var(--laranja-forte);
+}
+
 .btn-navbar {
     border-radius: 1.25rem;
     padding: 0.6rem 1rem;
@@ -25,6 +39,109 @@
     color: var(--laranja-forte);
     background-color: white;
     border: solid 1px var(--laranja-forte);
+}
+
+/* Estilo-menu-mobile */
+
+.overlay-menu {
+    background-color: #000000d5;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99998;
+    display: none;
+}
+
+.btn-abrir-menu i {
+    font-size: 2.25rem;
+    color: var(--laranja-forte);
+}
+
+.overlay-menu.show {
+    display: block;
+}
+
+.menu-mobile {
+    background-color: var(--card-fundo);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.btn-abrir-menu {
+    display: none;
+}
+
+.btn-fechar {
+    padding: 1.25rem 4%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: var(--laranja-forte);
+    font-size: 2.25rem;
+}
+
+
+.menu-mobile .lista-navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* botão dentro do menu mobile */
+.menu-mobile .btn-navbar {
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+    width: 80%;
+    border-radius: 1.25rem;
+    padding: 0.8rem 1rem;
+    color: white;
+}
+
+.menu-mobile .navbar {
+    margin-top: 1rem;
+    padding: 0;
+
+    width: 100%;
+    justify-content: end;
+}
+
+.menu-mobile .navbar .link-navbar {
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+
+    display: block;
+    color: black;
+}
+
+.menu-mobile .navbar .link-navbar:hover {
+    background-color: white;
+    color: var(--laranja-forte);
+}
+
+
+.auconchego {
+    font-weight: bold;
+    color: white;
+    background-color: var(--laranja-forte);
 }
 
 /* texto principal  */
@@ -160,6 +277,50 @@ address a {
 }
 
 @media screen and (max-width:1020px) {
+
+
+    .btn-abrir-menu {
+        display: flex;
+    }
+
+    .lista-navbar {
+        display: none;
+    }
+
+    .btn-navbar {
+        display: none;
+    }
+
+    .flex-inicio {
+        flex-wrap: wrap-reverse;
+        gap: 2rem;
+        flex-direction: column-reverse;
+    }
+
+    /* quem-somos  */
+
+    .flex-quem-somos {
+        margin-top: 2rem;
+        flex-direction: column-reverse;
+    }
+
+    .btn-quem-somos {
+        width: 100%;
+    }
+
+    /* contato  */
+
+    .flex-formulario {
+        flex-direction: column;
+    }
+
+    /* formulario */
+
+
+    .texto-contato h1 {
+        font-size: 2rem;
+    }
+
     /* footer  */
 
     .caixa-final-flex {
@@ -174,4 +335,5 @@ address a {
     .email p {
         margin: .5rem;
     }
+
 }

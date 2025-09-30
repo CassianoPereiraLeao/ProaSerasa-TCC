@@ -1,0 +1,24 @@
+@import url(reset.css);
+
+.inicio-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 412px;
+}
+
+.caixa-texto {
+    padding: 1.25rem 0rem;
+}
+
+.texto-inicio {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+}
+
+main {
+    min-height: 70dvh;
+}
